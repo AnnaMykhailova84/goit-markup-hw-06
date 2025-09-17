@@ -221,18 +221,19 @@ body {
   background-color: #2e2f42;
   background-position: center;
   text-align: center;
-  padding: 188px 0;
+  padding: 72px 0;
 }
 .banner-container {
-  max-width: 1440px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .banner-title {
-  max-width: 496px;
+  max-width: 216px;
   color: #ffffff;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   margin: 0 auto;
 }
@@ -243,7 +244,7 @@ body {
   border-style: none;
   background-color: #4d5ae5;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  margin: 48px auto 0;
+  margin: 72px auto 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -261,7 +262,7 @@ body {
 }
 
 .stand-out {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .visually-hidden {
@@ -276,8 +277,20 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .stand-out-list {
   display: block;
+}
+
+.stand-out-item {
+  width: 100%;
+}
+
+.stand-out-item {
+  margin-bottom: 72px;  
+}
+.stand-out-item:last-child {
+  margin-bottom: 0;
 }
 
 .stand-out-pic {
@@ -292,6 +305,7 @@ body {
   height: 112px;
   margin-bottom: 8px;
 }
+
 .stand-out-icon {
   position: absolute;
   top: 50%;
@@ -300,20 +314,22 @@ body {
 }
 
 .stand-out-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+  text-align: center;
 }
 .stand-out-desc {
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 
 .our-team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .our-team-title {
@@ -331,6 +347,7 @@ body {
 }
 
 .our-team-item {
+  margin-bottom: 72px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -340,9 +357,13 @@ body {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
+.our-team-item:last-child {
+  margin-bottom: 0;
+}
 
 .member-desc {
   padding: 32px 0;
+  text-align: center;
 }
 
 .member-name {
@@ -955,30 +976,54 @@ body {
   .header-nav-mobile {
     display: none;
   }
-  
+  .banner {
+    padding: 112px 0;
+  }
+
+  .banner-title {
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+
+  .banner-btn {
+    margin: 36px auto 0;
+  }
+
   .stand-out-list {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .stand-out-item {
-    width: calc((100% - 72px) / 4);
+    flex-basis: calc((100% - 24px) / 2);
+    max-width: 356px; 
+    margin-bottom: 0;
   }
-  
-  .stand-out-pic {
-    display: flex;
+  .stand-out-item:not(:nth-child(-n+2))  {
+    margin-top: 48px;
   }
+    .stand-out-title {
+    text-align: left;
+  }  
+
   .our-team-list {
     display: flex;
-    text-align: center;
     gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
   }
   
   .our-team-item {
-    /* width: calc((100% - 72px) / 4); */
+    flex-basis: calc((100% - 24px) / 2);
+    max-width: 264px;
+    margin-bottom: 0;
+  }
+  
+  .our-team-item:not(:nth-child(-n+2)) {
+    margin-top: 40px;
   }
   
   .portfolio-list {
@@ -1065,6 +1110,57 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
+  .banner {
+    padding: 188px 0;
+  }
+  
+  .banner-container {
+    max-width: 1440px;
+  }
+  
+  .banner-btn {
+    margin: 48px auto 0;
+  }
+  
+  .stand-out {
+    padding: 120px 0;
+  }
+  .stand-out-list {
+    flex-wrap: nowrap;
+  }
+
+  .stand-out-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .stand-out-item:not(:nth-child(-n+2)) {
+    margin-top: 0;
+  }
+  .stand-out-pic {
+    display: flex;
+  }
+
+  .stand-out-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #2e2f42;
+  }
+
+  .stand-out-desc {
+    font-weight: 400;
+  }
+  
+  .our-team {
+    padding: 120px 0;
+  }
+
+  .our-team-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .our-team-item:not(:nth-child(-n+2)) {
+    margin-top: 0;
+  }
+  
   .footer-container {
     flex-wrap: nowrap;
     justify-content: space-between;
