@@ -1146,7 +1146,7 @@ body {
       url(../images/people-office.jpg);
     padding: 188px 0;
   }
-  
+
   /* 2x screens, retina, 2880x1200 image */
   @media (min-resolution: 2x) {
     .banner {
@@ -1223,6 +1223,7 @@ body {
   .footer-container {
     flex-wrap: nowrap;
     justify-content: space-between;
+    width: 100%;
   }
   .footer-block {
     margin-right: 120px;
